@@ -20,9 +20,12 @@ export const AddTodo: React.FC<AddTodoProps> = (props) => {
 
   return (
     <>
-      <div className="w-full h-[80px] px-5">
-        <form onSubmit={submitForm} className="flex items-center gap-8">
-          <div className="h-full flex gap-5 px-4 py-2 items-center">
+      <div className="w-full px-5">
+        <form
+          onSubmit={submitForm}
+          className="flex flex-col items-start gap-3 py-3 md:gap-8 md:items-center md:flex-row"
+        >
+          <div className="flex items-center h-full gap-5 px-4 py-2">
             <label htmlFor="newTodo" className="text-sm text-[#a6a6a6]">
               Add new Item:
             </label>
@@ -38,7 +41,7 @@ export const AddTodo: React.FC<AddTodoProps> = (props) => {
           </div>
           <button
             type="submit"
-            className="px-3 py-2 bg-[#39b2ad] rounded-sm text-lg font-bold"
+            className="px-3 py-2 bg-[#39b2ad] rounded-sm text-lg font-bold w-full md:max-w-[150px]"
           >
             Add
           </button>
